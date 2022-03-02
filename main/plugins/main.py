@@ -49,10 +49,9 @@ async def compin(event):
                             buttons=[
                                 [Button.inline("Eɴᴄᴏᴅᴇ", data="encode"),
                                  Button.inline("Cᴏᴍᴘʀᴇss", data="compress")],
-                                [Button.inline("CONVERT", data="convert"),
-                                 Button.inline("RENAME", data="rename")],
-                                [Button.inline("SSHOTS", data="sshots"),
-                                 Button.inline("TRIM", data="trim")]
+                                [Button.inline("Cᴏɴᴠᴇʀᴛ", data="convert"),
+                                 Button.inline("✎ Rᴇɴᴀᴍᴇ", data="rename")],
+                                [Button.inline("Sᴄʀᴇᴇɴsʜᴏᴛ", data="sshots")]
                             ])
             elif 'png' in video:
                 return
@@ -61,14 +60,14 @@ async def compin(event):
             elif 'jpg' in video:
                 return    
             else:
-                await event.reply('📦',
+                await event.reply('•',
                             buttons=[  
-                                [Button.inline("RENAME", data="rename")]])
+                                [Button.inline("✎ Rᴇɴᴀᴍᴇ", data="rename")]])
     await event.forward_to(int(ACCESS_CHANNEL))
     
 @Drone.on(events.callbackquery.CallbackQuery(data="encode"))
 async def _encode(event):
-    await event.edit("**🔀ENCODE**",
+    await event.edit("•",
                     buttons=[
                         [Button.inline("240p", data="240"),
                          Button.inline("360p", data="360")],
@@ -76,21 +75,21 @@ async def _encode(event):
                          Button.inline("720p", data="720")],
                         [Button.inline("x264", data="264"),
                          Button.inline("x265", data="265")],
-                        [Button.inline("BACK", data="back")]])
+                        [Button.inline("↵ Bᴀᴄᴋ", data="back")]])
      
 @Drone.on(events.callbackquery.CallbackQuery(data="compress"))
 async def _compress(event):
-    await event.edit("**🗜COMPRESS**",
+    await event.edit("**Wʜɪᴄʜ Cᴏᴍᴘʀᴇss Tʏᴘᴇ Is Yᴏᴜ Wᴀɴᴛ?**",
                     buttons=[
-                        [Button.inline("HEVC COMPRESS", data="hcomp"),
-                         Button.inline("FAST COMPRESS", data="fcomp")],
-                        [Button.inline("BACK", data="back")]])
+                        [Button.inline("Hᴇᴠᴄ Cᴏᴍᴘʀᴇss", data="hcomp"),
+                         Button.inline("Fᴀsᴛ Cᴏᴍᴘʀᴇss", data="fcomp")],
+                        [Button.inline("↵ Bᴀᴄᴋ", data="back")]])
 
 @Drone.on(events.callbackquery.CallbackQuery(data="convert"))
 async def convert(event):
     button = await event.get_message()
     msg = await button.get_reply_message()  
-    await event.edit("🔃**CONVERT**",
+    await event.edit("•",
                     buttons=[
                         [Button.inline("MP3", data="mp3"),
                          Button.inline("FLAC", data="flac"),
@@ -100,18 +99,19 @@ async def convert(event):
                          Button.inline("MKV", data="mkv")],
                         [Button.inline("FILE", data="file"),
                          Button.inline("VIDEO", data="video")],
-                        [Button.inline("BACK", data="back")]])
+                        [Button.inline("↵ Bᴀᴄᴋ", data="back")]])
                         
 @Drone.on(events.callbackquery.CallbackQuery(data="back"))
 async def back(event):
-    await event.edit("📽", buttons=[
-                    [Button.inline("ENCODE", data="encode"),
-                     Button.inline("COMPRESS", data="compress")],
-                    [Button.inline("CONVERT", data="convert"),
-                     Button.inline("RENAME", data="rename")],
-                    [Button.inline("SSHOTS", data="sshots"),
-                     Button.inline("TRIM", data="trim")]])
-    
+    await event.reply("•",
+                     buttons=[
+                         [Button.inline("Eɴᴄᴏᴅᴇ", data="encode"),
+                          Button.inline("Cᴏᴍᴘʀᴇss", data="compress")],
+                         [Button.inline("Cᴏɴᴠᴇʀᴛ", data="convert"),
+                          Button.inline("✎ Rᴇɴᴀᴍᴇ", data="rename")],
+                         [Button.inline("Sᴄʀᴇᴇɴsʜᴏᴛ", data="sshots")]
+                     ])                           
+                   
 #-----------------------------------------------------------------------------------------
 
 process1 = []
