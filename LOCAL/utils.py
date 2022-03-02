@@ -73,6 +73,6 @@ async def ffmpeg_progress(cmd, file, progress, now, event, ps_name, log=None):
                 )
                 e_size = humanbytes(size) + " of ~" + humanbytes((size / per) * 100)
                 eta = time_formatter(some_eta)
-                await event.edit(f'{ps_name}\n\n{progress_str}' + f'GROSS: {e_size}\n\nETA: {eta}')
+                await event.edit(f'╭───[ {ps_name} ]────⍟\n│\n├📁 Dᴏɴᴇ : {e_size}\n│\n├🚀 Pʀᴏɢʀᴇꜱꜱ : {2}%\n│\n├⚡Sᴘᴇᴇᴅ : {speed}\n│\n├⏱️ Eᴛᴀ : {eta}\n╰────────────────⍟')
                 if log != None:
-                    await log.edit(f'{ps_name}\n\n{progress_str}' + f'GROSS: {e_size}\n\nETA: {eta}')
+                    await log.edit(f'╭───[ {ps_name} ]────⍟\n│\n├📁 Dᴏɴᴇ : {e_size}\n│\n├🚀 Pʀᴏɢʀᴇꜱꜱ : {2}%\n│\n├⚡Sᴘᴇᴇᴅ : {speed}\n│\n├⏱️ Eᴛᴀ : {eta}\n╰────────────────⍟')
