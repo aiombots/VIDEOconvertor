@@ -15,7 +15,7 @@
 from .. import Drone, ACCESS_CHANNEL, AUTH_USERS
 from telethon import events, Button
 from LOCAL.localisation import START_TEXT as st
-from LOCAL.localisation import info_text, spam_notice, help_text, DEV, source_text, SUPPORT_LINK
+from LOCAL.localisation import info_text, spam_notice, help_text, DEV, source_text, SUPPORT_LINK, about_text
 from ethon.teleutils import mention
 from ethon.mystarts import vc_menu
 from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
