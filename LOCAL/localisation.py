@@ -29,6 +29,25 @@ help_text = """**v1.4**
 
 source_text = "**Deploy your own bot**"
 
+about_text = """╭──────{ Aʙᴏᴜᴛ }─────⍟
+│
+├ Bᴏᴛ Nᴀᴍᴇ : [Hᴇᴠᴄ Cᴏᴍᴘʀᴇss Bᴏᴛ](https://t.me/AIOM_HEVC_COMPRESS_BOT)
+│
+├ Vᴇʀsɪᴏɴ : 1.0.0.0  Bᴇᴛᴀ
+│
+├ Sᴇʀᴠᴇʀ : [Hᴇʀᴏᴋᴜ](https://www.heroku.com)
+│
+├ Lɪʙʀᴀʀʏ : Tᴇʟᴇᴛʜᴏɴ
+│
+├ Dᴇᴠᴇʟᴏᴘᴇʀ : [Cʟɪᴄᴋ Hᴇʀᴇ](https://t.me/ChVivekTomar)
+│
+├ Eᴅɪᴛɪɴɢ : [Cʟɪᴄᴋ Hᴇʀᴇ](https://t.me/ajvadntr3)
+│
+├ Pᴏᴡᴇʀᴇᴅ Bʏ : [ƛƖƠM ƁƠƬƧ](https://t.me/AIOM_BOTS)
+│
+│
+╰──────[ Tʜᴀɴᴋ Yᴏᴜ ]───⍟‌‌"""
+
 DEV = "https://t.me/MaheshChauhan"
 
 spam_notice = "This bot is hosted on heroku, and hence can just run one process at a time.Spamming the bot or encoding adult videos will lead you to a ban."
