@@ -73,15 +73,15 @@ async def sett(event):
     msg = await button.get_reply_message() 
     await event.delete()
     async with Drone.conversation(event.chat_id) as conv: 
-        xx = await conv.send_message("Send me any image for thumbnail as a `reply` to this message.")
+        xx = await conv.send_message("Sᴇɴᴅ Mᴇ Aɴʏ Iᴍᴀɢᴇ Fᴏʀ Tʜᴜᴍʙɴᴀɪʟ As A Rᴇᴘʟʏ Tᴏ Tʜɪs Mᴇssᴀɢᴇ")
         x = await conv.get_reply()
         if not x.media:
-            xx.edit("No media found.")
+            xx.edit("No Media Found.")
         mime = x.file.mime_type
         if not 'png' in mime:
             if not 'jpg' in mime:
                 if not 'jpeg' in mime:
-                    return await xx.edit("No image found.")
+                    return await xx.edit("No Image Found.")
         await set_thumbnail(event, x.media)
         await xx.delete()
         
