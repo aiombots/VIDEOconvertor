@@ -29,8 +29,7 @@ from main.plugins.encoder import encode
 from main.plugins.ssgen import screenshot
 
 #Don't be a MF by stealing someone's hardwork.
-forcesubtext = f"Hey there!To use this bot you've to join @{FORCESUB_UN}.\n\nAlso join @DroneBots."
-
+forcesubtext = "Hᴇʏ Tʜᴇʀᴇ!  Tᴏ Usᴇ Tʜɪs Bᴏᴛ Yᴏᴜ Nᴇᴇᴅ Tᴏ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ"
 @Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def compin(event):
     db = Database(MONGODB_URI, 'videoconvertor')
@@ -39,7 +38,8 @@ async def compin(event):
         if media:
             yy = await force_sub(event.sender_id)
             if yy is True:
-                return await event.reply(forcesubtext)
+                return await event.reply(forcesubtext,
+                                   button=[[Button.url("Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/AIOM_BOTS")]])
             banned = await db.is_banned(event.sender_id)
             if banned is True:
                 return await event.reply(f'you are Banned to use me!\n\ncontact [SUPPORT]({SUPPORT_LINK})', link_preview=False)
