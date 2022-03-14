@@ -39,7 +39,7 @@ async def compin(event):
             yy = await force_sub(event.sender_id)
             if yy is True:
                 return await event.reply(forcesubtext,
-                                   button=[[Button.url("Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/AIOM_BOTS")]])
+                                   buttons=[[Button.url("Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/AIOM_BOTS")]])
             banned = await db.is_banned(event.sender_id)
             if banned is True:
                 return await event.reply(f'you are Banned to use me!\n\ncontact [SUPPORT]({SUPPORT_LINK})', link_preview=False)
